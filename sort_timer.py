@@ -42,7 +42,7 @@ def make_lists_of_sort_times(sort_func1, sort_func2, lengths):
     times1, times2 = [], []
     for length in lengths:
         lst = [random.randint(1, 10000) for _ in range(length)]
-        lst_copy = lst(lst)
+        lst_copy = list(lst)
         times1.append(sort_func1(lst))
         times2.append(sort_func2(lst_copy))
     return times1, times2
